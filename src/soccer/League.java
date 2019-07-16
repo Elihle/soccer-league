@@ -2,6 +2,8 @@ package soccer;
 
 public class League {
     public static void main(String[] args) {
+
+
         Player player1 = new Player();
         player1.PlayerName = "Lihle Menzeleleli";
 
@@ -15,6 +17,8 @@ public class League {
 
         Team team1 = new Team();
         team1.teamName = "Barcelona";
+        team1.playerArray = thePlayers;
+
 
 //        Team team2 = new Team();
 //        team2.teamName = "Man United";
