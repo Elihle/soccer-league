@@ -31,13 +31,26 @@ public class League {
         team2.playerArray[2] = new Player();
         team2.playerArray[2].PlayerName = "Lihle Carter";
 
-        for (Player thePlayer : team1.playerArray) {
-            System.out.println(thePlayer.PlayerName);
-        }
+        Game currGame = new Game();
+        currGame.homeTeam = team1;
+        currGame.awayTeam = team2;
 
-        for (Player thePlayer : team2.playerArray) {
-            System.out.println(thePlayer.PlayerName);
-        }
+        Goal goal1 = new Goal();
+        goal1.thePlayer = currGame.homeTeam.playerArray[2];
+        goal1.theTeam = currGame.awayTeam;
+        goal1.theTime = 33.5;
+
+        Goal[] theGoals = {goal1};
+        currGame.goals = theGoals;
+
+        System.out.println("Goals scored after " + currGame.goals[0].theTime + " mins by " + currGame.goals[0].thePlayer.PlayerName + " of " + currGame.goals[0].theTeam.teamName);
+//        for (Player thePlayer : team1.playerArray) {
+//            System.out.println(thePlayer.PlayerName);
+//        }
+//
+//        for (Player thePlayer : team2.playerArray) {
+//            System.out.println(thePlayer.PlayerName);
+//        }
 
     }
 }
