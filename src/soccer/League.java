@@ -44,6 +44,23 @@ public class League {
         currGame.goals = theGoals;
 
         System.out.println("Goals scored after " + currGame.goals[0].theTime + " mins by " + currGame.goals[0].thePlayer.PlayerName + " of " + currGame.goals[0].theTeam.teamName);
+
+        for (Player thePlayer : team2.playerArray) {
+            if (thePlayer.PlayerName.matches(".*Mar.*")) {
+                System.out.println("Found: " + thePlayer.PlayerName);
+                System.out.println("Last Name: " + thePlayer.PlayerName.split(" ")[1]);
+            }
+        }
+
+        for (Player thePlayer : team1.playerArray) {
+            String name [] = thePlayer.PlayerName.split(" ");
+            StringBuilder familyNameFirst = new StringBuilder();
+            familyNameFirst.append(name[1]);
+            familyNameFirst.append(", ");
+            familyNameFirst.append(name[0]);
+            System.out.println(familyNameFirst);
+        }
+
 //        for (Player thePlayer : team1.playerArray) {
 //            System.out.println(thePlayer.PlayerName);
 //        }
